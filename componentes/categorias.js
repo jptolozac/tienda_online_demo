@@ -1,7 +1,6 @@
 export const Categorias = ({categorias}) => {
     const contenedor = document.createElement('div')
     contenedor.classList.add('contenedor')
-    console.log(categorias)
 
     const tituloSeccion = document.createElement('span')
     tituloSeccion.classList.add('titulo-seccion')

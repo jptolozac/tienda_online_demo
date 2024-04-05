@@ -1,11 +1,9 @@
-import { Header } from "./componentes/header.js"
+import { Header } from "./componentes/header/header.js"
 import { cargarCategorias } from "./servicios/carga/cargarCategorias.js"
 import { cargarDatos } from "./servicios/carga/cargarDatos.js"
+import { eliminarCookie, getCookie, setCookie } from "./servicios/cookies/cookies.js"
 import { masVendido } from "./servicios/visual/masVendido.js"
 import { popular } from "./servicios/visual/popular.js"
-const root = document.getElementById('main')
-const productos = []
-let categorias = []
 
 window.addEventListener('load', async() => {
     const header = document.querySelector('header')
@@ -15,4 +13,14 @@ window.addEventListener('load', async() => {
     masVendido(productos)
     popular(productos)
     cargarCategorias({ categorias })
+
+    setCookie("prueba", 85)
+    setCookie("prueba", 21)
+    setCookie("prueba2", 12)
+    eliminarCookie("prueba2")
+    console.log(parseInt(getCookie("prueba")))
 })
+
+function cerrarSesion(){
+    console.log("holii")
+}

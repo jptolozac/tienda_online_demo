@@ -1,5 +1,5 @@
-import { Producto } from "../../componentes/producto.js"
-import { SeccionProductos } from "../../componentes/seccionProductos.js"
+import { Producto } from "../../componentes/productos/producto.js"
+import { SeccionProductos } from "../../componentes/productos/seccionProductos.js"
 
 export const cargarProductos = ({datos, titulo}) => {
     const root = document.getElementById('main')

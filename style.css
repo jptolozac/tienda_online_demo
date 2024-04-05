@@ -33,12 +33,13 @@ body{
 
 nav{
     display: grid;
-    width: 100vw;
-    grid-template-columns: repeat(4, minmax(0, 1fr));
+    width: 100%;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     padding: 15px 0;
     /* background-color: var(--color-terciario); */
     justify-items: center;
     align-items: center;
+    flex-wrap: wrap;
 }
 
 main{
@@ -62,6 +63,7 @@ a{
 .barra-de-busqueda{
     display: flex;
     width: 100%;
+    min-width: 300px;
     grid-column: span 2/ span 2;
     grid-row: 1;
     height: 100%;
@@ -82,7 +84,7 @@ button{
     display: block;
     width: max-content;
     margin: 50px auto;
-    max-width: 100vw;
+    max-width: 100%;
 }
 .titulo-seccion{
     display: flex;
@@ -97,7 +99,7 @@ button{
     /* border-radius: 20px; */
     overflow: auto;
     /* scrollbar-width: thin; */
-    width: minmax(100vw, calc(200px * 6));
+    /* width: minmax(100%, calc(200px * 6)); */
     min-width: 90%;
     max-width: calc(200px * 6);
 }
@@ -147,6 +149,11 @@ button{
     left: 0;
     z-index: 1;
 }
+.btn-add-carrito{
+    border: 0;
+    padding: .5rem;
+    border-radius: .5rem
+}
 
 .seccion-categorias{
     /* display: grid;
@@ -192,4 +199,24 @@ button{
     display: flex;
     flex-wrap: wrap;
     margin: 0 auto;
+}
+
+.icono-carrito, .icono-logueo{
+    width: 1.2rem;
+}
+.carrito, .logueo{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 50px;
+    gap: 5px;
+}
+.contenedor-carrito-login{
+    display: flex;
+    justify-content: space-between;
+    width: 200px;
+}
+.separacion{
+    border: 1px solid rgba(128, 128, 128, 0.164);
 }
